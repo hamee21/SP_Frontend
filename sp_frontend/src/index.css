@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Noto Sans Thai', sans-serif;
+  background-color: #fdfdf8; /* สดใสขึ้น */
+  color: #3a1c0e;
+}
+
+a {
+  text-decoration: none;
+  color: #d2691e;
+}
+
+a:hover {
+  color: #e75c1b;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 2;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #4d210f;
+}
+
+/* CONTAINERS */
+.container-main {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0px;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #a0382c; /* พื้นหลังสว่างขึ้น */
+  border-bottom: 4px solid #872922;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.header .logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: #b22222;
+  display: flex;
+  align-items: center;
+}
+
+.header ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.header ul li a, 
+.header ul li button {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.header ul li svg {
+  margin-right: 6px;
+}
+
+/* HEADING */
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  padding: 0 20px;
+  color: #8b0000;
+}
+
+.heading p {
+  color: #a0522d;
+}
+
+/* BUTTONS */
+.btn {
+  background-color: #b22222; /* 🔴 แดงเข้ม */
+  color: #fff8dc;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: #8a1c1c; /* hover แดงเข้มขึ้น */
+  transform: scale(0.98);
+}
+
+.btn-reverse {
+  background: #fff8dc;
+  color: #b22222;
+  border: 1px solid #b22222;
+}
+
+.btn-sm {
+  padding: 5px 15px;
+  font-size: 13px;
+}
+
+.btn-danger {
+  background: #a31515;
+  color: #fff;
+}
+
+.btn-green {
+  background-color: #2e8b57;
+  color: #fff;
+  border: none;
+}
+
+.btn-green:hover {
+  background-color: #246b45;
+}
+
+.topbar-btn {
+  background-color: transparent;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 8px 14px;
+  font-size: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.topbar-btn svg {
+  margin-right: 6px;
+}
+
+.topbar-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* FORM */
+.form {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fffdf8;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #f4a460;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-family: inherit;
+  background-color: #fffdfa;
+  font-size: 16px;
+}
+
+.form-group input:focus {
+  outline: 2px solid #ffa07a;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  text-align: left;
+  color: #8b4513;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 50px;
+  text-align: center;
+  color: #8b4513;
+  padding: 20px;
+  background-color: #ffd9b3;
+  border-top: 2px solid #ffb066;
+}
+
+/* LAYOUT */
+.main-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.restaurant-layout {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.restaurant-card {
+  flex: 1;
+  min-width: 300px;
+  background-color: #fff8f2;
+  border: 1px solid #f4a460;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.restaurant-map {
+  flex: 1;
+  min-width: 300px;
+}
+
+.restaurant-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #84261e;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.restaurant-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #442911;
+}
+
+.restaurant-info strong {
+  color: #a0382c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .header .logo a {
+    font-size: 20px;
+  }
+}
