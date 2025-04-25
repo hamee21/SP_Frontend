@@ -18,16 +18,16 @@ function Header() {
     <header className="header">
         
         <div className='logo' style={{ display: 'flex', alignItems: 'center', fontSize: '24px', fontWeight: 'bold' }}>
-  <FaUtensils style={{ marginRight: '8px', color: '#fff' }} />
-  <span style={{
-    fontFamily: "'Pacifico', cursive",
-    fontSize: '26px',
-    color: '#fff',
-    letterSpacing: '1px'
-  }}>
-    Tasty<span style={{ color: '#fbc02d' }}>Table</span>
-  </span>
-</div>
+          <FaUtensils style={{ marginRight: '8px', color: '#fff' }} />
+          <span style={{
+            fontFamily: "'Pacifico', cursive",
+            fontSize: '26px',
+            color: '#fff',
+            letterSpacing: '1px'
+          }}>
+            Tasty<span style={{ color: '#fbc02d' }}>Table</span>
+          </span>
+        </div>
       <ul>
         {user ? (
           <li>

@@ -5,38 +5,35 @@ import { FaUser } from 'react-icons/fa'
 import { useSelector, useDispatch } from 'react-redux'
 import { register, reset } from '../features/auth/authSlice'
 
-
 function Register() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         password: '',
         password2: '',
+        telephone: '',
         role: 'user'
     });
 
-    const { name, email, password, password2, role } = formData;
+    const { name, email, password, password2, telephone, role } = formData;
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const {user,isLoading, isError, isSuccess, message} = useSelector((state) => {
-        return state.auth
-    })
+    const { user, isLoading, isError, isSuccess, message } = useSelector((state) => state.auth)
     
     useEffect(() => {
-        if(isError) {
+        if (isError) {
             toast.error(message)
         }
-        
-        //redirect when logged in
-        if(isSuccess || user) {
+
+        // Redirect when logged in
+        if (isSuccess || user) {
             navigate('/')
         }
-        
-        dispatch(reset())
-    },[isError, isSuccess, user, message, navigate, dispatch])
 
+        dispatch(reset())
+    }, [isError, isSuccess, user, message, navigate, dispatch])
 
     const onChange = (e) => {
         setFormData((prevState) => ({
@@ -54,9 +51,10 @@ function Register() {
                 name,
                 email,
                 password,
+                telephone,
                 role
             }
-            
+
             dispatch(register(userData))
         }
     }
@@ -82,19 +80,27 @@ function Register() {
                             placeholder='Enter Your email' required />
                     </div>
                     <div className="form-group">
-                        <input type="password" className='formcontrol' id='password' name='password' value={password}
+                        <input type="password" className='form-control'
+                            id='password' name='password' value={password}
                             onChange={onChange} placeholder='Enter Your password' required />
                     </div>
                     <div className="form-group">
-                        <input type="password" className='formcontrol' id='password2' name='password2' value={password2}
+                        <input type="password" className='form-control'
+                            id='password2' name='password2' value={password2}
                             onChange={onChange} placeholder='Confirm Your password' required />
                     </div>
                     <div className="form-group">
-                        <input type="text" className='form-control' id='role' name='role' value={role} onChange={onChange}
-                            placeholder='Enter Your Role' required />
+                        <input type="text" className='form-control'
+                            id='telephone' name='telephone' value={telephone}
+                            onChange={onChange} placeholder='Enter Your telephone' required />
+                    </div>
+                    <div className="form-group">
+                        <input type="text" className='form-control'
+                            id='role' name='role' value={role} onChange={onChange}
+                            placeholder='Enter Your role' required readOnly />
                     </div>
                     <div className='form-group'>
-                        <button className='btn btnblock'>Submit</button>
+                        <button className='btn btn-block'>Submit</button>
                     </div>
                 </form>
             </section>
